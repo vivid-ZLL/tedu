@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            width: 550px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border: 5px solid #4c4c4c
+        }
+
+        ul>li {
+            border-bottom: #cee2df solid 1px;
+            border-right: solid 1px #cee2df;
+            overflow: hidden;
+
+        }
+
+        ul>li>span {
+            width: 100px;
+            padding: 5px 4px;
+            /* display: inline-block; */
+            border-right: solid 1px #cee2df;
+            float: left;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <span>product</span>
+                <span>price</span>
+                <span>ID Code</span>
+                <span>Quality</span>
+                <span>Exp Date</span>
+            </li>
+            <li>
+                <span>Pro</span>
+                <span>1</span>
+                <span>51</span>
+                <span>$ 4587</span>
+                <span>2010/1/1</span>
+            </li>
+            <li>
+                <span>Pro</span>
+                <span>1</span>
+                <span>51</span>
+                <span>$ 4587</span>
+                <span>2010/1/1</span>
+            </li>
+            <li>
+                <span>Pro</span>
+                <span>1</span>
+                <span>51</span>
+                <span>$ 4587</span>
+                <span>2010/1/1</span>
+            </li>
+            <li>
+                <span>Pro</span>
+                <span>1</span>
+                <span>51</span>
+                <span>$ 4587</span>
+                <span>2010/1/1</span>
+            </li>
+            <li>
+                <span>Pro</span>
+                <span>1</span>
+                <span>51</span>
+                <span>$ 4587</span>
+                <span>2010/1/1</span>
+            </li>
+        </ul>
+
+    </div>
+    <script>
+        //获取除第一行外的行的集合
+        $("ul>li:not(li:first)").each(function (index, elem) {
+            $(elem).on("mouseover", function () {
+                $(this).css({
+                    "backgroundColor": "#4c4c4c",
+                    "color": "white"
+                }).on("mouseout", function () {
+                    $(this).css({
+                        "backgroundColor": "white",
+                        "color": "black"
+                    })
+                })
+            })
+        })
+        console.log($("ul>li:not(li:first)"))
+    </script>
+</body>
+
+</html>

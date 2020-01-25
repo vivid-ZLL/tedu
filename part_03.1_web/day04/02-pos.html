@@ -1,0 +1,47 @@
+<!-- 使用绝对元素对目标进行定位 -->
+<!-- 绝对定位需要找一个父类参照 -->
+<!-- 一般父元素是相对定位,子元素是绝对定位 -->
+<!-- 如果父元素不是相对定位,子元素会转而以浏览器边框定位 -->
+<!-- 参照就近原则 -->
+
+<!--子元素可以设置为相对百分比的宽度,这个百分比相对于父元素  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent{
+            width: 704px;
+            height: 760px;
+            border: 1px solid black;
+            margin: 0 auto;
+            position: relative;
+            
+        }
+        #child{
+            width: 704px;
+            height: 35px;
+            background-color: rgba(0,0,255,0.5);
+            position: absolute;
+            bottom: 0;
+            color: #FFF;
+            text-align: center
+        }
+        #parent>img{
+            width: 100%;
+            height: 100%;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div id="parent">
+        <img src="img02.png" alt="">
+        <div id="child">吃瓜吗</div>
+    </div>
+</body>
+</html>

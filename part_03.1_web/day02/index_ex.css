@@ -1,0 +1,5 @@
+#p1{color:orange}       /*id选择器*/
+.cc{color:pink}       /*类选择器*/
+
+#p1,.cc{color:blue}  /*群组选择器*/
+

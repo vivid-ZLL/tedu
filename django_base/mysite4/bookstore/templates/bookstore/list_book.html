@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图书列表</title>
+    <style>
+
+
+
+        #t01 {
+            margin: 0px auto;
+            font-size: 25px;
+        }
+
+        td {
+            border: black 1px solid;
+            /*padding: 0;*/
+            text-align: center;
+            padding: 5px 20px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+{% block block_name %}
+
+{% endblock block_name %}
+<div>
+    <table style="border: 2px grey solid" id="t01" cellspacing="0">
+        <tr>
+            <td>编号</td>
+            <td>书名</td>
+            <td>出版社</td>
+            <td>定价</td>
+            <td>市场价</td>
+            <td>删除</td>
+            <td>修改</td>
+        </tr>
+
+
+
+        {% for abook in books %}
+        <tr>
+            <td>{{ abook.id }}</td>
+            <td>{{ abook.title }}</td>
+            <td>{{ abook.pub }}</td>
+            <td>{{ abook.price }}</td>
+            <td>{{ abook.market_price }}</td>
+            <td><a href="/bookstore/del/{{ abook.id }}">删除</a></td>
+            <td><a href="/bookstore/mod/{{ abook.id }}">修改</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</div>
+</body>
+</html>

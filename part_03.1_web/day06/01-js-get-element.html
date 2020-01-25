@@ -1,0 +1,22 @@
+<!-- script获取元素测试 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "d01" class="d01" style="color: red">hello world!</div>
+    <div id = "d02" class="d02" style="color: black">hello world!</div>
+    <script>
+        a = document.getElementById("d01")  //返回一个元素对象
+        b = document.getElementsByClassName("d02")  //返回一个元素对象列表
+        a.style="color: blue"
+        b[0].style="color: pink"
+        console.log(a.id)
+        console.log(b)
+    </script>
+</body>
+</html>

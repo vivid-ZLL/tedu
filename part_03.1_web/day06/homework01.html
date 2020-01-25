@@ -1,0 +1,91 @@
+<!-- 鼠标点击/滑动切换窗口 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .top{
+            border: 1px red solid;
+            overflow: hidden;
+
+        }
+        .top>div{
+            float: left;
+            border: 1px red solid;
+            font-size: 14px;
+            padding: 10px 25px;
+            background-color: #c4c4c4
+        }
+        .bottom>div{
+            margin-top: 20px;
+        }
+        .title{
+            color:#a7a6e5;
+            padding: 20px;
+        }
+        
+        #bottom04,#bottom03,#bottom02,#bottom01{
+            position: absolute;
+        }
+        #top01{
+           
+        }
+        #bottom04,#bottom03,#bottom02,#bottom01{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="top">
+            <div id="top01"><span>热点新闻</span></div>
+            <div id="top02"><span>合作播报</span></div>
+            <div id="top03"><span>行业咨询</span></div>
+            <div id="top04"><span>运营攻略</span></div>
+        </div>
+        <div id="bottom04">
+            <div><span class="title">[运营攻略]</span><span class="content">加盟网络棋牌游戏的注意事项</span></div>
+            <div><span class="title">[运营攻略]</span><span class="content">加盟网络棋牌游戏的注意事项</span></div>
+            <div><span class="title">[运营攻略]</span><span class="content">加盟网络棋牌游戏的注意事项</span></div>
+            <div><span class="title">[运营攻略]</span><span class="content">加盟网络棋牌游戏的注意事项</span></div>
+        </div>
+
+        <div id="bottom03">
+            <div><span class="title">[行业咨询]</span><span class="content">行业咨询的内容</span></div>
+            <div><span class="title">[行业咨询]</span><span class="content">行业咨询的内容</span></div>
+            <div><span class="title">[行业咨询]</span><span class="content">行业咨询的内容</span></div>
+            <div><span class="title">[行业咨询]</span><span class="content">行业咨询的内容</span></div>
+        </div>
+
+        <div id="bottom02">
+            <div><span class="title">[合作通报]</span><span class="content">合作通报的内容</span></div>
+            <div><span class="title">[合作通报]</span><span class="content">合作通报的内容</span></div>
+            <div><span class="title">[合作通报]</span><span class="content">合作通报的内容</span></div>
+            <div><span class="title">[合作通报]</span><span class="content">合作通报的内容</span></div>
+        </div>
+
+        <div id="bottom01">
+            <div><span class="title">[热点新闻]</span><span class="content">热点新闻的内容</span></div>
+            <div><span class="title">[热点新闻]</span><span class="content">热点新闻的内容</span></div>
+            <div><span class="title">[热点新闻]</span><span class="content">热点新闻的内容</span></div>
+            <div><span class="title">[热点新闻]</span><span class="content">热点新闻的内容</span></div>
+        </div>
+    </div>
+
+    <script>
+        var top02 = document.getElementById("top02") 
+        var bottom02 = document.getElementById("bottom02")
+        top02.onmouseover =function(){
+            top02.style.backgroundColor = "aqua";
+            bottom02.style.display = "block";
+        }
+        top02.onmouseout = function(){
+            top02.style.backgroundColor = " #c4c4c4";
+            bottom02.style.display = "none";
+        }
+    </script>
+</body>
+</html>

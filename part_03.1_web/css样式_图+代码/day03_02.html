@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      
+        p{
+            color: aliceblue;
+        }
+        input{
+            display: inline-block;
+            width: 70px;
+            border: solid 1px transparent;
+            outline: none;
+
+        }
+        .all{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+        }
+        .all::before{
+            content: "";
+            position:absolute;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background: url(img01.jpg) no-repeat fixed ;
+            filter: blur(10px);
+            z-index: -1;
+            background-size: 100% 100%;
+        }
+        #img01{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px transparent solid;
+            box-shadow: 3px 3px 5px rgb(36, 35, 35);
+        }
+        .top{
+            text-align: center;
+        }
+        .bottom{
+            overflow: hidden;
+            width: 400px;
+            position:absolute;
+            bottom: 0px;
+        }
+        .bottom div input{
+            box-shadow: 3px 3px 5px rgb(36, 35, 35);
+        }
+        #d02{
+            
+            width: 70px;
+            margin: 0 auto;
+        }
+        #d03{
+           /* 玩耍按钮位置 */
+           float: right;
+           position: relative;
+           left: -36px;
+           bottom: 24px;  
+        } 
+        #d01{
+            position: relative;
+           float: left;
+           left: 36px;
+           bottom: -1px; 
+        } 
+
+    </style>
+</head>
+<body>
+    <div class = "all">
+        <div class="top">
+            <div><img id="img01" src="img01.jpg" alt=""></div>
+            <p style="line-height: 40px;font-size: 20px; font-family: 'Courier New', Courier, monospace">Alice Margatroid</p>
+            <p>七色的人偶师</p>
+            <p style="font-size: 14px">魔法之森</p>
+            <p>萌萌哒(￣3￣)~</p>
+        </div>
+        <div class="bottom">
+            <div id="d01"><input type="submit" value="访问主页"style = "background-color:#2aa5dd"></div>
+            <div id="d02"><input type="submit" value="发消息"  style = "background-color:#00b833"></div>
+            <div id="d03"><input type="submit" value=" 退 出 "style = "background-color:#cc0000"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

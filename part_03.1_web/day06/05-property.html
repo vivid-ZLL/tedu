@@ -1,0 +1,41 @@
+<!-- 抓取元素属性 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+    <style>
+       #tip{
+         font-size: 150px;
+       }
+    </style>
+</head>
+<body>
+   
+    <div id="tip" style="border: 1px solid red" >你好！</div>
+
+    <script>
+        var a=document.getElementById("tip");
+        console.log(a.id);
+        // console.log(a.style.border);
+        a.style.fontSize = "160px";
+        // console.log(a.style.fontSize);
+        console.log(a.style.color);
+        console.log( a.getAttribute("color"));
+        console.log( a.getAttribute("font-size"));
+        
+
+        a.onclick = function(){
+            a.style = "color:black";
+            a.style.fontSize = "260px";
+            
+        
+        }
+        
+        
+    </script>
+</body>
+</html>

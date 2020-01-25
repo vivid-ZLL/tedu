@@ -1,0 +1,28 @@
+<!-- 获取文本框内容并实时显示 -->
+<!-- 操作字符串 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tip"></div>
+    <input type="text"  id="txt">
+
+    <script>
+        //获取文本框元素并保存在变量中
+        var objTip = document.getElementById("tip");
+        var objTxt = document.getElementById("txt");
+
+        //文本框输入事件触发
+        objTxt.oninput = function(){
+            
+            objTip.innerText = objTxt.value.toUpperCase()+"+"+objTxt.value[0];
+            console.log(objTip.innerText.indexOf("a"))
+        }
+    </script>
+</body>
+</html>

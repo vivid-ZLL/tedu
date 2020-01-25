@@ -1,0 +1,40 @@
+<!-- 精灵图技术:将小图标拼接在一张图片上,借助background进行图片位置的调整 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #sp{
+        width: 25px;
+        height: 25px;
+        border: solid 1px red;
+        background-image: url("img07.png");
+        margin: 0 auto;  
+    }
+    #sp2{
+        width: 25px;
+        height: 25px;
+        border: solid 1px red;
+        background-image: url("img07.png");
+        margin: 0 auto;  
+        background-position: 0px -25px;
+    }
+    #sp3{
+        width: 25px;
+        height: 25px;
+        border: solid 1px red;
+        background-image: url("img07.png");
+        margin: 0 auto;  
+        background-position: 0px -50px;
+    }
+    </style>
+</head>
+<body>
+    <div id="sp"></div>
+    <div id="sp2"></div>
+    <div id="sp3"></div>
+</body>
+</html>

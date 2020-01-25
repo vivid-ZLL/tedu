@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">跨域请求</button>
+<script src="/static/js/jquery-1.11.3.js"></script>
+
+<script>
+    //跨域要用到的预留函数
+    function print(data) {
+        console.log("server data is:" + data);
+    }
+
+    /*
+    $(function () {
+        $('#btn').click(function () {
+            //js源生跨域
+
+            //获取body
+            var body = document.getElementsByTagName('body')[0];
+            //创建script 标签
+            var script = document.createElement('script');
+
+            script.type = 'text/javascript';
+            script.src = 'http://localhost:8000/ajax/cross_server/?callback=print';
+
+            //将script标签插入到 body
+            body.append(script)
+        })
+    })*/
+
+
+
+    //jquery cross
+
+    $(function () {
+        $('#btn').click(function () {
+            //$.ajax跨域
+            $.ajax({
+                url: 'http://localhost:8000/ajax/cross_server/',
+                type: 'get',
+                //jsonp模式只支持get请求
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                jsonpCallback: "print",
+            })
+        })
+    });
+
+
+    //ajax跨域,超简版
+    $(function () {
+        $('#btn').click(function () {
+            //$.ajax跨域
+            $.ajax({
+                url: 'http://localhost:8000/ajax/cross_server_json/',
+                type: 'get',
+                //jsonp模式只支持get请求
+                dataType: 'jsonp',
+                success: function (data) {
+                    console.log('this is jquery console')
+                    console.log(data)
+                }
+            })
+        })
+    })
+
+</script>
+
+
+{#跨域原理#}
+<script>
+    (function () {
+        print('jagsdjgasjydtqiwheknakjsdd');
+    }())
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+Null0 is up, line protocol is up
+  Interface state transitions: 1
+  Hardware is Null interface
+  Internet address is Unknown
+  MTU 1500 bytes, BW 0 Kbit
+     reliability 255/255, txload Unknown, rxload Unknown
+  Encapsulation Null,  loopback not set,
+  Last link flapped BVI1
+  address is 10f3.116c.e6a7

@@ -1,0 +1,29 @@
+<!-- 滑动条元素 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div>
+        <input id="d01" type="range" name="" id=""style= "width:600px" max="64" min="12" step="2">
+    </div>
+    <div>
+        <p id="p01">50</p>
+    </div>
+    <script>
+        d01 =document.getElementById("d01")
+        p01 = document.getElementById("p01")
+        p01.innerText = (Number(d01.max)+Number(d01.min))/2
+        d01.onchange = function(){
+            p01.innerText = d01.value
+        }
+    </script>
+</body>
+</html>

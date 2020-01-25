@@ -1,0 +1,24 @@
+MgmtEth0/RSP0/CPU0/1 is administratively down, line protocol is administratively down
+  Interface state transitions: 0
+  Hardware is Management Ethernet, address is 10f3.114b.253a (bia 10f3.114b.253a)
+  Internet address is Unknown
+  MTU 1514 bytes, BW 1000000 Kbit (Max: 1000000 Kbit)
+     reliability 255/255, txload 0/255, rxload 0/255
+  Encapsulation ARPA,
+  Duplex unknown, 1000Mb/s, THD, link type is autonegotiation
+  output flow control is off, input flow control is off
+  loopback not set,
+  Last input 6w6d, output never
+  Last clearing of "show interface" counters never
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     4294967295 packets input, 0 bytes, 0 total input drops
+     0 drops for unrecognized upper-level protocol
+     Received 4294967295 broadcast packets, 0 multicast packets
+              0 runts, 4294967295 giants, 0 throttles, 0 parity
+     4294967291 input errors, 4294967295 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 total output drops
+     Output 0 broadcast packets, 0 multicast packets
+     4294967292 output errors, 0 underruns, 0 applique, 0 resets
+     0 output buffer failures, 0 output buffers swapped out
+     0 carrier transitions

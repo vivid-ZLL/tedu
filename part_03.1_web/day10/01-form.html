@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #tip{
+            color:red;
+            display: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <!-- action表示提交到服务器的路径 -->
+    <form action="" onsubmit="return sub();">
+        <!-- 表单元素name属性 用于获取数据的名称 -->
+        <!-- id属性用于js/css中定位这个元素 -->
+        <input type="text" 
+                name="text_msg"
+                id="aa">
+
+        <input type="submit" value="提交">
+        <!-- 需要防止输入内容为空时,也可以提交的情况 -->
+        <!-- submit触发的表单验证事件不在提交按钮上 -->
+        <!--    数据由表单提交,按钮为表单服务,所以验证事件(onsubmit)在表单元素(form)上 -->
+        <!--    在onsubmit事件中,如果返回值为false,则不能提交,如果返回值为true则可以提交 -->
+        <!--    另外若不能提交,则需要给出提示信息"内容不能为空" -->
+        <div id="tip" >内容不能为空</div>
+        <input type="text" 
+                name="text_msg"
+                id="aa1">
+    </form>
+    <script>
+        //封装一个用于提交事件的函数,验证提交元素是否为空
+        function sub(){
+            var aa = document.getElementById("aa")
+            var aa1 = document.getElementById("aa1")
+            var tip =document.getElementById("tip")
+
+
+            if (aa.value==""){
+                //双重触发focus?? 前面触发的focus()被取消,只有最后的focus()有效
+                // 触发文本框焦点选中状态
+                aa.focus()
+                aa1.focus()
+                tip.style.display = "block";
+                return false;
+            }
+            return true
+        }
+    </script>
+</body>
+</html>

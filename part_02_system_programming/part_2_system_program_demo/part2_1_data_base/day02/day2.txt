@@ -1,0 +1,22 @@
+前情回顾
+
+1. 数据结构 ：组成数据的数据元素间关系
+
+2. 结构 ：逻辑结构，存储结构
+
+3. 单链表
+
+练习1 ： 入栈顺序为 1,2,3,问出站的顺序不可是什么？
+
+练习2 ： 完成逆波兰表达式的实现
+
+
+作业 ： 1. 熟悉markdown标签规则，会编写基本的markdown文档
+        
+				2. 熟练重点代码
+
+				3. 编程作业
+
+				  编写一个接口程序，获取一段文字，判定文字中括号是否匹配正确，如果正确则打印正确，不正确则支出出错的地方
+				
+				  "Thanks to {the} flexibility of Python and the [powerful] ecosystem of pac(kages, {the Azure (CLI)} supports features such as autoc]ompletion (in shells that support it), persistent credentials, JMESPath result parsing, lazy initialization, network-less unit tests, and more."

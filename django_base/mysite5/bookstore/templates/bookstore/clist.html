@@ -1,0 +1,13 @@
+<!-- 筛选内容 -->
+{% extends "bookstore/list_book.html" %}
+
+{% block block_name %}
+<form action="" method="post">
+    <div>
+        <span>书名</span>
+        <input type="text" name="content" placeholder="请输入">
+    </div>
+    <div><input type="submit"></div>
+</form>
+{{ msg | safe }}
+{% endblock block_name %}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 使用link元素导入样式文件 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 注意导入顺序 -->
+    <!-- 导入jQ压缩版 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 导入页面业务逻辑代码 -->
+    <script src="js/blog.js"></script>
+</head>
+
+<body>
+    <!-- 根据UI效果添加页面元素 -->
+    <!-- 先用div包裹一个图片元素 -->
+
+    <div id="login">
+        <!-- 背景图片元素 -->
+        <img src="b.jpg" alt="">
+    </div>
+    <!-- 此处新建一个外围最大的div元素 -->
+
+    <form action="" onsubmit="return checkvalue()">
+        <div id="log">
+
+            <!-- 此处将所有元素添加到div中 -->
+            <div class="title">
+                <h3>Login!</h3>
+            </div>
+            <!-- 注意样式的命名,分类以达到css选择器能准确地找到对应元素 -->
+            <div class="tip">
+                Login:
+            </div>
+            <div class="item">
+                <input type="text" name="username" id="username" placeholder="UserName">
+            </div>
+            <div class="error" id="err1">用户名不能为空!</div>
+
+            <div class="item">
+                <input type="text" name="password" id="password" placeholder="PassWord">
+            </div>
+            <div class="error" id="err2">密码不能为空!</div>
+            <div class="btn"><input type="submit" value="Login"></div>
+        </div>
+    </form>
+
+</body>
+
+</html>

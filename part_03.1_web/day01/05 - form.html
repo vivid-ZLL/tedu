@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <div>
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" placeholder="请输入用户名">
+        </div>
+    </form>
+    <form action="1">
+        <div>
+            <label for="pass">密码:</label>
+            <input type="password" id="pass" name = "name" placeholder="请输入密码">
+        </div>
+        
+        <!-- 下拉列表框元素 -->
+        <div>
+            <label for="x1">学历</label>
+            <select name = "x1" id = "x1">
+                <option value="1">大学</option>
+                <option value="2">中学</option>
+                <option value="3">小学</option>
+            </select>
+        
+        </div>
+
+        <div>
+        <!-- 单选元素,适用于少数选项,少数文字 -->
+            <label for="sex">性别</label>
+            <input type="radio" value="1" name = "sex">男  <!--# 文字包裹在div里 name属性相同,则相互排斥-->
+            <input type="radio" value="2" name = "sex" >女 
+            <input type="radio" value="2" name = "sex" checked>你猜 <!--check属性表示默认选择-->
+
+        </div>
+
+        <div>
+            <!-- 多选元素,适用于少数选项,少数文字的多选 -->
+            <label for="like">爱好</label>
+            <input type="checkbox" name = "like1">蔡徐坤
+            <input type="checkbox" name = "like2">唱
+            <input type="checkbox" name = "like3">跳
+            <input type="checkbox" name = "like4">rap
+            <input type="checkbox" name = "like5">篮球
+            <input type="checkbox" name = "like6" checked>music
+
+        </div>
+
+        <div>
+            <!--输入多行、多列内容-->
+            <label for="demo">简介:</label>
+            <textarea name="msg" id="" cols="30" rows="10"></textarea>
+            
+        </div>
+
+        <div>
+            <input type="submit" value="注册" >
+            <input type="reset" value="重置"  >
+        </div>
+    </form>
+</body>
+</html>

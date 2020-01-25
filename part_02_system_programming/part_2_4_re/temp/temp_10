@@ -1,0 +1,17 @@
+tunnel-te11 is up, line protocol is up
+  Interface state transitions: 3
+  Hardware is Tunnel-TE
+  Internet address is 192.168.0.2/32
+  MTU 1500 bytes, BW 0 Kbit
+     reliability 255/255, txload Unknown, rxload Unknown
+  Encapsulation TUNNEL,  loopback not set,
+  Last link flapped 8w0d
+  Last input never, output 00:00:00
+  Last clearing of "show interface" counters never
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 17000 bits/sec, 29 packets/sec
+     0 packets input, 0 bytes, 0 total input drops
+     0 drops for unrecognized upper-level protocol
+     Received 0 broadcast packets, 0 multicast packets
+     23593868 packets output, 1835278695 bytes, 0 total output drops
+     Output 0 broadcast packets, 0 multicast packets

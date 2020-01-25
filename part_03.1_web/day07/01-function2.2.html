@@ -1,0 +1,24 @@
+<!-- 函数的全局变量 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tip"></div>
+    <script>
+        //声明  全局变量
+        var c = 300
+        function aa(){
+            //在函数体内使用var定义的变量就是局部变量
+            var c = 100;
+            console.log(c)
+        }
+        aa();
+        console.log(c);
+    </script>
+</body>
+</html>

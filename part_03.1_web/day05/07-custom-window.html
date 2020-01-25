@@ -1,0 +1,108 @@
+<!-- 自定义弹窗格式 -->
+<!-- 1.背景要覆盖100% 
+     2.背景要覆盖被遮罩的元素,使其不能被操作
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      
+        body{
+            font-size: 13px;
+        }
+        #bg{
+            position: absolute;
+            top:0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            display: none;    
+        }
+        #box{
+            border: solid 0px #ccc;
+            display: none;
+            width: 260px;
+            background-color: #008081;
+            color: white;
+            position:absolute;
+            z-index: 2;
+            /* 绝对定位居中的手段 左边缘取50% - 边框的一半 */
+            left: 50%;
+            margin-left: -130px;
+            bottom: 50%;
+            border-radius: 3px;
+
+        }
+        #box .con{
+            overflow: hidden;
+            padding: 10px 15px;
+            background-color: white;
+        }
+        #box .con img{
+            float: left;
+            margin: 0px 10px;
+        }
+        #box .con .rright{
+            float: left;
+            
+
+        }
+        #box .con .rright .btn{
+            text-align: center;
+        }
+        #box .con .rright .btn>button{
+            background-color:  #008081;
+            width: 62px;
+            border: none;
+            color:#fff;
+            padding: 5px 0
+        }
+    </style>
+</head>
+<body>
+    <button id="btnShow">点此弹出信息</button>
+    <div id="bg"></div>
+    <!-- 定义一个弹框 -->
+    <div id="box">
+        <div class="title">
+            提示
+        </div>
+        <div class="con">
+            <div class="img">
+                <img src="img03.png" alt="">
+            </div>
+            <div class="rright">
+                <p style="color: black">Are you sure to delete it?</p>
+                <div class="btn">
+                    <button id = "cls">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var btnShow = document.getElementById("btnShow")
+        var bg = document.getElementById("bg")
+        var box = document.getElementById("box")
+        var btnCls = document.getElementById("cls")
+
+        btnShow.onclick = function(){
+            bg.style.display = "block"
+            box.style.display = "block"
+
+        }
+        btnCls.onclick = function(){
+            bg.style.display = "none"
+            box.style.display = "none"
+        }
+        
+    </script>
+</body>
+</html>

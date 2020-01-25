@@ -1,0 +1,30 @@
+<!-- 函数的定义和调用 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tip"></div>
+    <script>
+        //扩展的json格式对象函数
+        var log = {
+            ab:function(){
+                return "ok"
+            }(),
+            cd:function(){
+                return"no"
+            }()
+        }    
+        console.log(log.ab)
+        console.log(log.cd)
+
+        var objTip = document.getElementById("tip");
+            objTip.innerText = log.ab+log.cd
+        
+    </script>
+</body>
+</html>

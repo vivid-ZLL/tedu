@@ -1,0 +1,18 @@
+BVI201 is up, line protocol is up
+  Interface state transitions: 1
+  Hardware is Bridge-Group Virtual Interface, address is 10f3.116c.e6a7
+  Internet address is 192.168.1.2/24
+  MTU 1514 bytes, BW 10000000 Kbit (Max: 10000000 Kbit)
+     reliability 255/255, txload 0/255, rxload 0/255
+  Encapsulation ARPA,  loopback not set,
+  Last link flapped 1w0d
+  ARP type ARPA, ARP timeout 04:00:00
+  Last input 00:19:00, output 00:19:00
+  Last clearing of "show interface" counters never
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     48 packets input, 2880 bytes, 0 total input drops
+     0 drops for unrecognized upper-level protocol
+     Received 2 broadcast packets, 0 multicast packets
+     47 packets output, 1974 bytes, 0 total output drops
+     Output 1 broadcast packets, 0 multicast packets

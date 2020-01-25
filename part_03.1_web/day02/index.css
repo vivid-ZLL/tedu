@@ -1,0 +1,6 @@
+*{color:green}
+p{color:blue;}
+div{color:pink}
+*{color:green}   /*此处体现样式表的优先级*/
+
+#p1{color:orange}    /*id 选择器*/

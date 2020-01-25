@@ -1,0 +1,24 @@
+<!-- checkbox属性操作 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <input type="checkbox"
+           checked
+           name = "marry" 
+           id = "marry"
+    >婚否
+    <script>
+        //jq对象的.attr方法返回的是"checked"或者"undefined"
+        console.log($("#marry").attr("checked"))
+        //jq对象的.prop方法返回的是"true"或者"false"  更便于操作
+        console.log($("#marry").prop("checked"))
+    </script>
+</body>
+</html>

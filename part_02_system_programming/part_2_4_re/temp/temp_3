@@ -1,0 +1,18 @@
+BVI100 is down, line protocol is down
+  Interface state transitions: 6
+  Hardware is Bridge-Group Virtual Interface, address is 10f3.116c.e6a7
+  Internet address is 192.168.1.100/24
+  MTU 1514 bytes, BW 10000000 Kbit (Max: 10000000 Kbit)
+     reliability 255/255, txload 0/255, rxload 0/255
+  Encapsulation ARPA,  loopback not set,
+  Last link flapped 3w1d
+  ARP type ARPA, ARP timeout 04:00:00
+  Last input 3w1d, output 3w1d
+  Last clearing of "show interface" counters never
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     3196 packets input, 151340 bytes, 0 total input drops
+     0 drops for unrecognized upper-level protocol
+     Received 65 broadcast packets, 12 multicast packets
+     3133 packets output, 132666 bytes, 0 total output drops
+     Output 9 broadcast packets, 0 multicast packets

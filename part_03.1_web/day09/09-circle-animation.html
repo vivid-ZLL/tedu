@@ -1,0 +1,116 @@
+<!-- 循环动画测试02-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        #ball02{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 100px;
+            left: 600px;
+        }
+        #ball03{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 600px;
+            left: 100px;
+        }#ball04{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 600px;
+            left: 600px;
+        }
+        
+
+    </style>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="ball"></div>
+    <div id="ball02"></div>
+    <div id="ball03"></div>
+    <div id="ball04"></div>
+
+    <button id="btn">请开始你的表演</button>
+    <button id="btn02">请开始你的表演X2</button>
+
+    <script>
+        function act01(target){
+                    $(target).animate({
+                        left:"600px"
+                    })
+                }
+
+        function act02(target){
+                $(target).animate({
+                top:"600px"
+                })
+        }
+        
+        
+        
+        function act03(target){
+                $(target).animate({
+                left:"100px"
+                })
+        }
+
+        function act04(target){
+                $(target).animate({
+                top:"100px"
+                })
+        }
+        
+        function go(){ 
+            act01("#ball")
+            act02("#ball")
+            act03("#ball")
+            act04("#ball")
+            
+            act02("#ball02")
+            act03("#ball02")
+            act04("#ball02")
+            act01("#ball02")
+
+            act03("#ball03")
+            act04("#ball03")
+            act01("#ball03")
+            act02("#ball03")
+
+            act04("#ball04")
+            act01("#ball04")
+            act02("#ball04")
+            act03("#ball04")
+        }  
+        
+        for(var i = 1;i<2000;i++){
+            go()
+        }
+       
+
+       
+    </script>
+</body>
+</html>

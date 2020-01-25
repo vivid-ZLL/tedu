@@ -1,0 +1,13 @@
+<!-- 筛选价格 -->
+{% extends "bookstore/list_book.html" %}
+
+{% block block_name %}
+<form action="" method="post">
+    <div>
+        <span>价格上限</span>
+        <input type="text" name="p_limit" placeholder="请输入">
+    </div>
+    <div><input type="submit"></div>
+</form>
+{{ msg | safe }}
+{% endblock block_name %}

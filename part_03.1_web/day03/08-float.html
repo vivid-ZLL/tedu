@@ -1,0 +1,49 @@
+<!-- 浮动元素的使用 -->
+<!-- 子元素全部设置浮动，导致父元素高度为0，
+    影响父元素背景色和背景图片展示,影响页面布局 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #parent{
+        margin: 0 auto;
+        /*方式一: height: 102px; */
+        width: 408px;
+        border: solid 1px red;
+        overflow: hidden;
+        /* 方式三:设置overflow */
+
+    }
+
+
+    #parent .child{
+        width: 100px;
+        height: 100px;
+        border: dashed 1px #666;
+        float: left;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+
+    </style>
+</head>
+<body>
+    <div id ="parent">
+        <div class="child"><img src="img02.png" alt=""></div>
+        <div class="child"><img src="img02.png" alt=""></div>
+        <div class="child"><img src="img02.png" alt=""></div>
+        <div class="child"><img src="img02.png" alt=""></div>
+        <!-- <div style="clear:left "></div>  -->
+        <!-- 方式二:添加一个清除浮动的元素 -->
+    </div>
+    <div>
+        吃瓜吗
+    </div>
+</body>
+</html>

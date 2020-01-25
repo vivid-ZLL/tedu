@@ -1,0 +1,36 @@
+<!-- 设置阴影 -->
+
+<!-- 属性：box-shadow
+1. 取值：h-shadow v-shadow blur spread color;
+1. 使用：不管是浏览器窗口还是元素自身都可以构建坐标系，统一以左上角为原点，向右向下为X轴和Y轴的正方向
+```
+h-shadow 	取像素值，阴影的水平偏移距离
+v-shadow 	取像素值，阴影的垂直偏移距离
+blur 		取像素值，表示阴影的模糊程度，值越大越模糊
+spread 		选填，取像素值，阴影的尺寸
+color 		选填,设置阴影颜色,默认为黑色 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #img01{
+            width: 146px;
+            height: 157px;
+            margin: 0 auto ;
+            box-shadow: 5px 5px 10px #000;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id= "img01">
+         <!--img是内联元素,要用块元素包裹,否则追加的元素不换行
+            居中手段用text-align : center --> 
+        <img src="img02.png" alt="图片未找到">
+    </div>
+</body>
+</html>

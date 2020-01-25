@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--action定义提交的地址-->
+<!--name定义提交的键-->
+<!--value默认值-->
+<img src="/static/1.jpeg" alt="">
+<form action="login2" method="post">
+    <div>
+        姓名<input name="username" value="{{ name }}"
+                 type="text">
+    </div>
+
+    <div>
+        密码<input name="passwd" value="{{passwd}}"
+                 type="password">
+    </div>
+
+    <div>
+        <input type="submit" value="登录">
+    </div>
+</form>
+</body>
+</html>

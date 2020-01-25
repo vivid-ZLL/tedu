@@ -1,0 +1,27 @@
+1.创建工程
+2.配置mysql数据库 mysite6_db
+    create database mysite6_db default charsetutf8
+
+3.配置settings
+
+3.创建应用user,编写模型类,添加注册功能
+   1...
+   2.在settings.py中进行注册
+   3.编写模型类
+   4.做两步迁移操作
+
+添加注册功能:
+    1)创建模板
+
+    2)编写视图处理函数
+
+    3)添加分布式路由
+        /user/reg
+
+编写主页部分:
+    应用名称:index
+    python3 manage.py startapp index
+    模板名称:
+    templates/index/index.html
+    视图: index_view
+    路由: index

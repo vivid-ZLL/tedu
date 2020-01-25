@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<button onclick="getXhr()">调用getXhr函数,创建GET请求</button>
+<button onclick="getXhrP()">调用getXhrP函数,创建POST请求</button>
+<div id="show">hello world(get)</div>
+
+<div>
+    <span>用户名</span>
+    <input type="text" id="uname">
+    <span>{{ msg }}</span>
+</div>
+<div>
+    <span>密码</span>
+    <input type="text">
+</div>
+
+<div id="show_p">hello world(post)</div>
+<script>
+
+    function getXhr() {
+        //获取GET请求
+        //1.创建xhr
+        var xhr = createXhr();
+        //2.不使用jQuery创建请求
+        xhr.open('get', '/user/get-xhr-server', true);
+        //3.设置回调
+
+        xhr.onreadystatechange = function () {
+        //判断xhr状态和服务器状态
+        //作用：每当xhr的readyState发生改变的时候都要触发的操作；
+        //也称作回调函数；当readyState的值为4且status值为200的时候，才可以获取响应数据
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                document.getElementById('show').innerHTML += '<div>' + xhr.responseText + '</div>';
+            }
+        };
+        //4.发送请求
+        xhr.send(null)
+
+    }
+</script>
+{#检查passwd#}
+<script>
+    function getXhrP() {
+        //功能?????
+        //创建xhr
+        var xhr = createXhr();
+        //创建请求
+        var uname = document.getElementById('uname').value;
+
+        var url = '/user/get-xhr-server/?uname=' + uname;
+        xhr.open('post', url, true);
+        //设置回调
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var res = xhr.responseText;
+                var show = document.getElementById('show_p');
+                show.innerHTML += '<div>' + res + '</div>'
+            }
+        };
+        //发送请求
+        xhr.send(null);
+    }
+</script>
+
+</body>
+</html>

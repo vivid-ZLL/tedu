@@ -1,0 +1,43 @@
+<!-- zindex设置重叠元素的先后显示顺序 -->
+<!-- 与hover属性配合样式 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #pic{
+            position: relative;
+            width: 1400px;
+            height: 1400px;
+            border: solid 1px red;
+        }
+        #pic>div:nth-child(1){
+            position: absolute;
+            left: 300px;
+            top:300px;
+            /* z-index: 2; */
+        }
+        #pic>div:nth-child(1):hover{
+            z-index: 2;
+        }
+        #pic>div:nth-child(2){
+            position: absolute;
+            left: 150px;
+            top:30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pic">
+        <div>
+            <img src="img02.png" alt="">
+        </div>
+        <div>
+            <img src="img02.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

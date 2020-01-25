@@ -1,0 +1,104 @@
+<!-- 将需求切成最外层大块
+在大块中切各个小块
+每块在开发都添加边框
+完成时将边框置为0 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h3,h5,p{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            font-size: 15px;
+            margin-right: 20px;
+        }
+        a:link{
+            color: #666;
+            text-decoration: none
+        }
+        a:visited{
+            color:#666;
+        }
+
+        #goods{
+            width: 270px;
+            border:solid 1px #ccc;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+        img{
+            width: 100%;
+        }
+        .img>img{
+            width: 100%;
+        }
+        .title{
+            
+            text-align: center;
+            padding: 10px 0 8px 0;
+            background-color: #eee
+        }
+        .mid{
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        .mid>.ll{
+            
+            width: 125px;
+            float: left;
+            text-align: center;
+        }
+        .mid>.rr{
+            
+            float: right;
+            width: 125px;
+            text-align: center;
+        }
+        .bottom{
+            padding: 0px 5px;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div id="goods">
+        <div class="top">
+            <h3>众筹</h3>
+            <div class="img">
+                <img src="imgs/img01.png" alt="">
+            </div>
+            <div class = "title">
+                <h3>吃瓜I-WATCH我看吃瓜群众</h3>
+                <p>一场吃瓜的盛宴</p>
+            </div>
+            <div class="mid">
+                <div class="ll">
+                    <img src="imgs/img03.jpg" alt="">
+                    <h5>吃瓜大圣</h5>
+                </div>
+                <div class="rr">
+                    <img src="imgs/img04.png" alt="">
+                    <h5>智能吃瓜运动鞋</h5>
+                </div>
+            </div>
+            <div class="bottom">
+                <a href="#">哈密瓜瓜</a>
+                <a href="#">大西瓜瓜</a>
+                <a href="#">地瓜呱呱</a>
+                <a href="#" style="color: orange;">[老倭瓜瓜]</a>
+                <a href="#">瓜瓜瓜皮</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

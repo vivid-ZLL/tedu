@@ -1,0 +1,22 @@
+<!-- 转类型函数测试 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("01"+true)
+        console.log(Number("10a"))   //转换参数为数字类型,转换失败返回NaN
+        console.log(isNaN("true01"))    //判断参数是否为字符串,是则返回true
+        console.log(parseInt("a101aaa"))     
+        // 从左向右依次对每一位字符转number,转换失败则停止向后解析,返回结果,如果一个数都没转成功,则返回NaN
+        var a = NaN
+        var b = "100"
+        console.log(a,b)
+    </script>
+</body>
+</html>

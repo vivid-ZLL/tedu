@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+
+</head>
+<body>
+<button onclick="showJson()">showJson</button>
+<script>
+    function showJson() {
+
+        var obj = {
+            "uname": "wanglaoshi",
+            "age": "18",
+            "gender": "male"
+        };
+        //表达多个json对象
+        var json_arr = [
+            {
+                "uname": "王老师",
+                "age": "19",
+                "nickname": "老王",
+            },
+            {
+                "uname": "王夫人",
+                "age": "18",
+                "nickname": "王夫人",
+            }
+        ];
+
+
+        /*
+        console.log('name:' + obj.uname);
+        console.log('age:' + obj.age);
+        console.log("gender:" + obj.gender);
+
+        //----------------js循环多个对象-------------------------------//
+
+        for (var i = 0; i < json_arr.length; i++) {
+            console.log('name:' + json_arr[i].uname);
+            console.log('age:' + obj.age);
+            console.log("gender:" + obj.gender);
+            }
+            */
+        //-----------jQ循环多个对象-----------------//
+        /*$(obj).each(function (i, obj) {
+            console.log('index:' + i);
+            console.log('uname:' + obj.uname);
+            console.log('uage:' + obj.age);
+
+        })*/
+
+        //--------------jQ循环多个对象---------------------//
+        $.each(json_arr, function (i, obj) {
+            console.log('uname:' + obj.uname)
+
+        });
+
+
+        // -------在控制台显示json字符串和json对象
+        // -------前端处理要先转成对象再进行逻辑处理
+        let json_str = '[{"uname":"LiLi","uage":30},{"uname":"Panghu","uage":"30"}]';
+        console.log(json_str);
+        var json_obj = JSON.parse(json_str);
+        console.log(json_obj)
+
+
+    }
+</script>
+</body>
+</html>

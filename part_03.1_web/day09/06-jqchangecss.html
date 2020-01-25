@@ -1,0 +1,53 @@
+<!-- 用jq制作动画,实现显示和隐藏 
+    改变动画样式-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+            border: grey dashed 1px;
+            padding: 0;
+        }
+        li{
+            border: grey dashed 1px;
+        }
+            
+    </style>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>aabbccdd</li>
+        <li>aabbccdd</li>
+        <li>aabbccdd</li>
+        <li>aabbccdd</li>
+    </ul>
+    <button id="btn">隐藏</button>
+    <script>
+        $("li:eq(2)").css("fontSize","66px")
+        $("li:first,li:last").css("color","aqua")
+        $("li:odd").css("backgroundColor","lightblue")
+        $("li:even").css("backgroundColor","aliceblue")
+        
+        $("#btn").on("click",function(){
+            if($("#btn").text() == "隐藏")
+                {$("ul").slideUp(500,function(){
+                    $("#btn").text("显示");
+                    })
+                }
+            else{
+                $("ul").slideDown(500,function(){
+                    $("#btn").text("隐藏");
+                    });
+            }
+        })
+
+       
+    </script>
+</body>
+</html>

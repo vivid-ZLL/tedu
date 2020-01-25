@@ -1,0 +1,5 @@
+div a {color:blue}  /*后代选择器*/
+
+div>div {color:red}  /*子代选择器*/
+
+

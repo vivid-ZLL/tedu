@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #d01 {
+            margin: 0px auto;
+            border: red 0px solid;
+        }
+
+        #t01 {
+            margin: 0px auto;
+            font-size: 25px;
+        }
+
+        td {
+            border: black 1px solid;
+            /*padding: 0;*/
+            text-align: center;
+            padding: 5px 20px;
+
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="d01"><a href="/bookstore/add"></a></div>
+<div>
+    <table style="border: 2px grey solid" id="t01" cellspacing="0">
+        <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>邮箱</td>
+
+        </tr>
+
+
+
+        {% for auth in authors %}
+        <tr>
+            <td>{{ auth.name }}</td>
+            <td>{{ auth.age }}</td>
+            <td>{{ auth.email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</div>
+</body>
+</html>

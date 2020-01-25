@@ -1,0 +1,25 @@
+<!-- 模拟关闭弹框按钮 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d01" style="width: 122px">
+        <div><img src="img02.png" alt=""></div>
+        <div style="float: right" ><img id = "i01" src="img01.png" alt=""></div>
+    </div>
+    <script>
+        i01.onclick = function(){
+            var yes = confirm("Are you sure to close the tags?")
+            //关闭前用confirm询问用户
+            if (yes){
+            d01.style="display: none"}
+        }
+
+    </script>
+</body>
+</html>

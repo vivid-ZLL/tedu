@@ -1,0 +1,27 @@
+<!-- 通过jq对象 prev()和next()方法找兄弟元素 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- css加载速度快,先写 -->
+    <style>
+           
+    </style>
+
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div>上一个兄弟元素</div>
+    <div id="tip">
+        jQuery框架是如此强大
+    </div>
+    <div>下一个兄弟元素</div>
+    <script>
+        console.log($("#tip").prev().text())
+        console.log($("#tip").next().text())
+    </script>
+</body>
+</html>

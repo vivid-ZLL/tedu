@@ -1,0 +1,37 @@
+<!-- 解决元素的宽度问题 -->
+<!-- 设置内边距 -->
+
+<!-- 内边距 属性：padding
+2. 作用：调整元素内容框与边框之间的距离
+3. 取值：单位是 px 或百分比，但不允许使用负值
+```
+20px;					一个值表示统一设置上右下左
+20px 30px;				两个值表示分别设置(上下) (左右)
+20px 30px 40px;			三个值表示分别设置上右下，左右保持一致
+20px 30px 40px 50px;	表示分别设置上右下左 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #img01{
+            width: 146px;
+            height: 157px;
+            margin: 0 auto ;
+            padding: 50px 
+        }
+    </style>
+
+</head>
+<body>
+    <div id= "img01">
+            <!--img是内联元素,要用块元素包裹,否则追加的元素不换行
+                居中手段用text-align : center --> 
+            <img src="img02.png" alt="图片未找到">
+        </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- 画三角形 -->
+<!-- 画圆 -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+     <style>
+        /* 直角边框设置    */
+        #test02{
+            width: 0;
+            height: 0;  
+            margin: 0 auto;
+            border: 50px solid #1124;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+        }
+
+        /* 圆角边框设置 */
+        /* 一个值 	统一设置四个角
+        四个值 	表示分别设置上右下左
+        两个值  对角一致
+        三个值 	表示分别设置上,右上,右下,剩下一个对角一致 */
+
+        /* 实现一个圆的步骤
+        必须是个正方形的元素
+        将边框半径设置为宽度和高度的一半 */
+
+        #test03{
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            margin: 0 auto;
+            border: 2px solid #fff;
+            border-radius:  50%
+        }
+        /* 样式的加载速度远大于图片 */
+
+     </style>
+ </head>
+ <body>
+    <div id="test02"></div>
+    <div id="test03"></div>
+ </body>
+ </html>

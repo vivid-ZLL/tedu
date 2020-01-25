@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 260px;
+            border: 1px solid #ccc;
+        }
+        ul>li:nth-child(1){
+            font-weight: 700;
+            background-color: #eee;
+            border: 0;
+        }
+        ul>li{
+            padding: 5px 10px;
+            border-bottom: dashed 1px #ccc
+        }
+        ul>li>span{
+            display: inline-block;
+            width: 120px;
+        }
+        #add{
+            padding: 5px 10px
+        }
+        #add>div>span{
+            display: inline-block;
+            width: 60px;
+            text-align: right;
+        }
+
+        #add>div{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="stu">
+            <ul id="ul">    
+                <!-- <li><span>姓名</span><span>年龄</span></li> -->
+                <!-- <li><span>张三</span><span>20</span></li>
+                <li><span>李四</span><span>30</span></li> -->
+            </ul>
+        </div>
+        <div id="add">
+            <div>
+                <span>姓名:</span>  
+                <input type="text" id="name">
+            </div>
+            <div>
+                <span>年龄:</span>
+                <input type="text" id="age">
+            </div>
+            <div>
+                <span></span>
+                <button id="btnA">增加</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        //定义一个数组
+        var stu = [{name:"张三",age:20},
+                   {name:"李四",age:20},
+
+        ]
+
+        
+        function loadStu(){
+            //读取数组元素,使用遍历的方式
+            var html="<li><span>姓名</span><span>年龄</span></li>"
+            for(var i=0;i<stu.length;i++){
+                console.log(stu[i].name)
+                html += "<li>";
+                html += "<span>"+stu[i].name+"</span>";
+                html += "<span>"+stu[i].age+"</span>";
+                html += "</li>";
+            }
+            document.getElementById("ul").innerHTML = html
+            
+        }
+        loadStu();
+
+        //使用innerHTML格式,可识别字符串当中的标签
+        //   innerText则不能识别
+       
+        
+        //获取增加按钮元素对象并保存
+        document.getElementById("btnA").onclick = function(){
+            //获取文本框中输入的值
+            var _name =document.getElementById("name").value;
+            var _age = document.getElementById("age").value;
+            //声明一个对象
+            var _obj={};
+            //设置对象的值
+            _obj.name=_name;
+            _obj.age = _age;
+            //将对象增加到数组中
+            stu.push(_obj);
+            loadStu();
+        }
+
+    </script>
+</body>
+</html>

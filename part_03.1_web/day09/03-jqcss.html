@@ -1,0 +1,39 @@
+<!-- jq框架操作css样式 
+    用jq绑定事件添加.class类至特定元素-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- css加载速度快,先写 -->
+    <style>
+        #tip{
+            border: solid 1px #ccc;
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px 0;
+            text-align: center;
+            color: black;
+        }
+        .red{
+            background-color: red;
+        }      
+    </style>
+
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div id="tip">
+        jQuery框架是如此强大
+    </div>
+    <script>
+        // jq绑定onclick事件
+        $("#tip").on("click",function(){
+            console.log("ok");
+            $("#tip").toggleClass("red");
+        })
+    </script>
+</body>
+</html>

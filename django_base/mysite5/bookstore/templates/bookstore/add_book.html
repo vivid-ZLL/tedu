@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加图书</title>
+</head>
+<body>
+<h1>欢迎使用图书数据管理系统 111111</h1>
+<form action="/bookstore/add_book" method="POST">
+    <div>
+        <span>书名</span>
+        <input type="text" name="title">
+    </div>
+    <div>
+        <span>出版社</span>
+        <input type="text" name="pub">
+    </div>
+    <div>
+        <span>定价</span>
+        <input type="text" name="price">
+    </div>
+
+    <div>
+        <span>市场价</span>
+        <input type="text" name="market_price">
+    </div>
+
+
+    <div>
+        <input type="submit" value="添加">
+    </div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!-- 筛选价格 -->
+{% extends "bookstore/list_book.html" %}
+
+{% block block_name %}
+<form action="" method="post">
+
+    <div><input type="submit" value="显示降价图书"></div>
+</form>
+{{ msg | safe }}
+{% endblock block_name %}

@@ -1,0 +1,73 @@
+<!-- 设置固定的顶部和侧边边框 -->
+<!-- 中间内容可滑动 -->
+<!-- absolute 网页滑动时,元素跟随滑动 -->
+<!-- fixed    网页滑动时,元素被钉死,不会动 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        #top{
+            text-align: center;
+            background-color: #01204f;
+            color:white;
+            padding: 5px 0px;
+            position: fixed;
+            width: 100%;
+            height: 25px;
+            top: 0px;
+        }
+        #left,#right{
+            width: 70px;
+            height:120px;
+            background-color: red;
+            top : 100px;
+            writing-mode: vertical-lr;
+            text-align: center;
+            
+        }
+        #left{
+            position: fixed;
+            left : 0px;
+        }
+        #right{
+            position: fixed;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        我想静静,我想吃瓜
+    </div>
+    <div id="left">
+        吃瓜吗少年
+    </div>
+    <div id="right">
+        吃瓜吗美女
+    </div>
+
+    <div style="margin-top: 35px">
+        瓜皮
+    </div>
+    <div style="margin-top: 55px">
+        瓜皮
+    </div>
+    <div style="margin-top: 55px">
+        瓜皮
+    </div>
+    <div style="margin-top: 55px">
+        瓜皮
+    </div>
+    <div style="height: 2000px;"></div>
+    
+</body>
+</html>

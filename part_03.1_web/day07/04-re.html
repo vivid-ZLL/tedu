@@ -1,0 +1,22 @@
+<!-- 正则表达式测试 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //创建正则对象,测试其方法,返回true或者false
+        var str = "aaannbslw";
+        var reg = /bs/ig;
+        console.log( reg.test(str) );
+
+        //匹配文本,返回匹配的字符串
+        var str01 = "hello@world"
+        console.log(str01.match(/.*@/) )
+    </script>
+</body>
+</html>

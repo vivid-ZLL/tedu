@@ -1,0 +1,35 @@
+<!-- 周期性地执行方法 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 600px;
+            border: 1px solid red;
+            word-wrap:break-word;
+        }
+    </style>
+</head>
+<body>
+    <div id="s01"><span id="s02"></span></div>
+    <button id="stop">停止</button>
+    
+    <script>
+        stop = document.getElementById("stop")
+        s01 = document.getElementById("s01")
+        
+        var i = 1
+        var task = setInterval(() => {
+            window.scrollBy(0,100);
+            s01.innerText += i++;
+        }, 40);
+        stop.onclick = function(){
+            clearInterval(task)
+        }
+    </script>
+</body>
+</html>

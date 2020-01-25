@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高级修改</title>
+</head>
+<body>
+<h1>欢迎使用图书数据管理系统  >>至尊VIP版<<</h1>
+<form action="/bookstore/highly_mod/{{ id }}" method="POST">
+    <div>
+        <span>书名</span>
+        <input type="text" name="title" value="{{ abook.title}}">
+    </div>
+    <div>
+        <span>出版社</span>
+        <input type="text" name="pub" value="{{ abook.pub }}">
+    </div>
+    <div>
+        <span>定价</span>
+        <input type="text" name="price" value="{{ abook.price }}">
+    </div>
+
+    <div>
+        <span>市场价</span>
+        <input type="text" name="market_price" value="{{ abook.market_price }}">
+    </div>
+
+
+    <div>
+        <input type="submit" value="修改">
+    </div>
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="/static/1.jpeg/" alt="">
+    <h1>从django后端传来参数 x = {{ x }}</h1>
+    {% if x < 0 %}
+    <h1>{{x}}是小于零</h1>
+    {% elif x > 0 %}
+    <h1>{{x}}是大于零</h1>
+    {% elif x == 0 %}
+    <h1>{{x}}是等于零</h1>
+    {% endif %}
+
+</body>
+</html>

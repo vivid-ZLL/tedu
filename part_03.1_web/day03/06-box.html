@@ -1,0 +1,67 @@
+<!-- 设置外边距 -->
+
+<!-- 单方向外边距：只取一个值
+   ```html
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left
+   ```
+1. 外边距合并：
+    	1）垂直相遇
+      
+        	子元素的margin-top作用于父元素上
+               
+         2. 元素之间同时设置垂直方向的外边距，最终取较大的值
+            包含合并
+      
+            当一个元素包含在另一个元素中时，它们的上和包含上/或下和包含下外边距也会发生合并 -->
+
+<!-- 1. 盒模型相关的属性会影响元素在文档中的实际占位，进而影响布局
+
+2. 元素设置width/height指定的是内容框的大小
+3. 最终尺寸 = width/height+padding+border+margin         -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        #div1{
+            background-color: red;
+            margin-bottom: 50px
+        }
+        #div2{
+            background-color: blue;
+            margin-top: 20px;
+        }
+        #div3{
+            margin-top: 10px;
+            background-color: black;
+            width: 300px;
+            height: 300px;
+        }
+        #div4{
+            border: 10px solid black ;
+            background-color: aqua;
+            width:  100px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div id = "div1"></div> -->
+    <!-- <div id = "div2"></div>  -->
+    <div id = "div3">
+    <div id = "div4"></div>
+    </div>
+    
+</body>
+</html>

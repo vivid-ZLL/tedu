@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+</head>
+<body>
+
+<div>
+    <span id="loading" style="display: none">加载中...[我是动画]</span>
+    用户名: <input type="text" id="name" value="998">
+
+    <button id="btn">jquery-ajax</button>
+</div>
+
+<script>
+    $(function () {
+        $('#btn').click(function () {
+            $.ajax({
+                url: '/ajax/jquery_ajax_server/',
+                type: 'get',
+                dataType: 'json',
+                //是否为异步
+                async: true,
+                success: function (data) {
+                    console.log(data.name);
+                    console.log(data.age);
+                    $('#loading').hide(3000);
+                    $('#btn').removeAttr("disabled")
+
+                },
+                error: function () {
+                    alert('server is busy !!')
+                },
+                beforeSend: function () {
+                    //发送前do something
+                    console.log('fa song qian do something');
+                    $('#loading').show();
+                    $('#btn').attr({disabled: "disabled"});
+                }
+            })
+        })
+    })
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

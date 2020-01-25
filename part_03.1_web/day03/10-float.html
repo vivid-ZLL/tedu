@@ -1,0 +1,47 @@
+<!-- 组合浮动元素示例 -->
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #img01{
+            width: 146px;
+        }
+        .fl{
+            float: left
+        }
+        .fl{
+            float: right
+        }
+
+        #news{
+            width: 300px;
+            border: solid 1px red;
+            overflow: hidden;
+            margin-bottom: 8px
+        }
+        p{
+           
+            width: 154px;
+            padding: 0;
+            margin: 0;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="news">
+        <img class="fl" id = "img01" src="img00.jpg" alt="找求不到">
+        <p class="fr">一名无辜的吃瓜群众一个无辜的吃瓜群众一只无辜的吃瓜群众一条无辜的吃瓜群众</p>
+    </div>
+    <div id="news">
+        <img class="fr" id = "img01" src="img00.jpg" alt="找求不到">
+        <p class="fl">一名无辜的吃瓜群众一个无辜的吃瓜群众一只无辜的吃瓜群众一条无辜的吃瓜群众</p>
+    </div>
+</body>
+</html>

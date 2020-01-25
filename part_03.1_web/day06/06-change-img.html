@@ -1,0 +1,62 @@
+<!-- setAttribute修改元素的属性值,与赋值类似 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    img{
+        width: 1000px;
+        }
+    fieldset{
+        width: 1000px;
+    }
+    fieldset{
+        word-spacing: 40px;
+        font-size: 30px;
+    }leisi
+    input{
+        width: 40px;
+        height: 25px;
+    }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <!-- 方框元素fieldset/legend 框选其内元素 -->
+        <legend>选择按钮</legend>
+        <input checked type="radio" name="pic" id="pic01">NO.1
+        <input type="radio" name="pic" id="pic02">NO.2
+        <input type="radio" name="pic" id="pic03">NO.3
+        <input type="radio" name="pic" id="pic04">NO.4
+    
+    
+        <div><img src="imgs/gm1.jpg" alt="" id="img00"></div>
+    </fieldset>
+
+    <script>
+        //获取图片元素变量
+        var btnPic1=document.getElementById("pic01");
+        var btnPic2=document.getElementById("pic02");
+        var btnPic3=document.getElementById("pic03");
+        var btnPic4=document.getElementById("pic04");
+        var imgShow=document.getElementById("img00");
+
+        //绑定元素的点击事件
+        btnPic1.onclick = function(){
+            imgShow.src = "imgs/gm1.jpg"
+        }
+        btnPic2.onclick = function(){
+            imgShow.src = "imgs/gm2.jpg"
+        }
+        btnPic3.onclick = function(){
+            imgShow.src = "imgs/gm3.jpg"
+        }
+        btnPic4.onclick = function(){
+            imgShow.setAttribute("src","imgs/gm4.jpg")
+        }
+    </script>
+</body>
+</html>

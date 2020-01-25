@@ -1,0 +1,52 @@
+<!-- 用if语句控制元素的展示与隐藏 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       #nav{
+           width: 200px;
+           border: solid 1px #ccc;
+           margin: 0px auto;
+       }
+       #nav>.title{
+           border-bottom:solid 1px #ccc;
+           padding: 5px 8px;
+           background-color: #eee;
+           /* 将外形改为手状 */
+           cursor:move; 
+       }
+       #nav>.con{
+           padding: 8px;
+           display: block;
+       }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="title" onclick="aa()">程序员的法则</div>
+        <div class="con">
+            每天都可以写代码，从事开发的工作。
+            每天都可以写代码，从事开发的工作。
+            每天都可以写代码，从事开发的工作。
+            每天都可以写代码，从事开发的工作。
+        </div>
+    </div>
+    <script>
+        function aa(){
+            //1.获取到标题和内容元素对象
+            var a=document.getElementsByClassName("title")[0];
+            var b=document.getElementsByClassName("con")[0];
+            //2.编写代码块aa的内容
+            if(b.style.display=="block"){
+                b.style.display="none";
+            }else{
+                b.style.display="block";
+            }
+        }
+    </script>
+</body>
+</html>

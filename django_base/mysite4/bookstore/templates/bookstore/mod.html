@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>欢迎使用图书数据管理系统  >>咸鱼版<<</h1>
+<form action="/bookstore/mod/{{ abook.id }}}" method="POST">
+    <div>
+        <span>书名</span>
+        <span>{{ abook.title }}</span>
+    </div>
+    <div>
+        <span>出版社</span>
+        <span>{{ abook.pub }}</span>
+    </div>
+    <div>
+        <span>定价</span>
+        <span>{{ abook.price }}</span>
+    </div>
+
+    <div>
+        <span>当前市场价</span>
+        <span>{{ abook.market_price }}</span>
+    </div>
+    <div>
+        <span>市场价</span>
+        <input type="text" name="market_price">
+    </div>
+
+
+    <div>
+        <input type="submit" value="修改">
+    </div>
+    <div>
+        <a href="/bookstore/highly_mod/{{ abook.id }}">高级修改</a>
+
+    </div>
+</form>
+</body>
+</html>
+</body>
+</html>

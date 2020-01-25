@@ -1,0 +1,17 @@
+TenGigE0/0/2/0.49 is down, line protocol is down
+  Interface state transitions: 0
+  Hardware is VLAN sub-interface(s), address is 10f3.114b.9778
+  Description: To 4_pa-leaf l2transport
+  Layer 2 Transport Mode
+  MTU 1518 bytes, BW 10000000 Kbit (Max: 10000000 Kbit)
+     reliability Unknown, txload Unknown, rxload Unknown
+  Encapsulation 802.1Q Virtual LAN,
+    Outer Match: Dot1Q VLAN 49
+    Ethertype Any, MAC Match src any, dest any
+  loopback not set,
+  Last input never, output never
+  Last clearing of "show interface" counters never
+     0 packets input, 0 bytes
+     0 input drops, 0 queue drops, 0 input errors
+     0 packets output, 0 bytes
+     0 output drops, 0 queue drops, 0 output errors

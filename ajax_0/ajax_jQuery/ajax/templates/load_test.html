@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<p> this is load_test</p>
+<button id="btn">show jQuery load</button>
+<div id="show"></div>
+
+<script>
+    $(function () {
+        $('#btn').click(function () {
+
+            //load 指定元素 ???
+            $('#show').load('/ajax/load_test_server/#btn2');
+
+            //传参
+            //get形式传到服务器那边
+            //$('#show').load('/ajax/load_test_server/', 'uname=alice$age=18');
+
+            //-------------------------------------
+            //传参-post形式
+            //js对象  {uname:'alice'}
+            //$('#show').load('/ajax/load_test_server/', {uname: 'alice'});
+            //此时触发post请求时,content-type 为表单头
+            //application/x-www-form-urlencoded
+
+            //-------------------------------------
+            //触发回调
+            /*$('#show').load('/ajax/load_test_server/', function () {
+                alert('我是回调函数')
+
+
+                //-------------------------------------
+                //测试load远程页面
+                // $('#show').load('http://www.baidu.com')
+                // 当访问远程[跟你当前域不一致的地址],浏览器将此次响应进行拦截
+            })*/
+
+
+        });
+    })
+
+</script>
+
+</body>
+</html>

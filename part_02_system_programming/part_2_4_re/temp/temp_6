@@ -1,0 +1,11 @@
+Loopback0 is up, line protocol is up
+  Interface state transitions: 1
+  Hardware is Loopback interface(s)
+  Internet address is 192.168.0.2/32
+  MTU 1500 bytes, BW 0 Kbit
+     reliability Unknown, txload Unknown, rxload Unknown
+  Encapsulation Loopback,  loopback not set,
+  Last link flapped 8w2d
+  Last input Unknown, output Unknown
+  Last clearing of "show interface" counters Unknown
+  Input/output data rate is disabled.
